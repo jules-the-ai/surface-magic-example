@@ -11,9 +11,7 @@ bundle exec jekyll serve
 
 ## GitHub Pages
 
-This repository is private. GitHub returned `Your current plan does not support GitHub Pages for this repository` when Pages enablement was attempted for `jules-the-ai/surface-magic-example`.
-
-The included workflow currently builds the Jekyll site on every push so the source remains verified. To deploy via GitHub Pages, either make the repository public or use an account/organization plan that supports Pages for private repositories, then switch the workflow to `actions/configure-pages`, `actions/upload-pages-artifact`, and `actions/deploy-pages`.
+The repository includes a GitHub Actions workflow at `.github/workflows/pages.yml` that builds Jekyll and deploys to GitHub Pages from `main`.
 
 ## Notes
 

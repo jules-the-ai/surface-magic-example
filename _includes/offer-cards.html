@@ -1,0 +1,5 @@
+<div class="offer-grid {% if include.compact %}compact{% endif %}">
+  {% for offer in site.data.offers %}
+  <article class="offer {{ offer.theme }}"><div class="coupon-icon">{{ offer.icon }}</div><h3>{{ offer.title }}</h3><p>{{ offer.summary }}</p><strong>{{ offer.cta }}</strong><small>{{ offer.fine_print }}</small><a class="btn {% if offer.theme == 'blue' %}dark{% else %}light{% endif %}" href="{{ site.phone_href }}">Call or Text Today</a></article>
+  {% endfor %}
+</div>

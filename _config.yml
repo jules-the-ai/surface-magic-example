@@ -1,11 +1,18 @@
 title: Surface Magic, LLC
 email: info@wnysurfacemagic.com
+phone: "(716) 315-5433"
+phone_href: "tel:+17163155433"
+text_offers_phone: "(716) 317-4814"
+service_area: "Erie County and Niagara County, NY"
+address_locality: "East Aurora"
+address_region: "NY"
 description: >-
-  Modern Jekyll rebuild concept for Surface Magic bathroom and kitchen refinishing in Erie and Niagara County, NY.
+  Surface Magic, LLC provides bathroom and tile refinishing, shower and tub refinishing, and kitchen countertop resurfacing in Erie County and Niagara County, NY.
 baseurl: ""
 url: "https://jules-the-ai.github.io"
 lang: en
 timezone: America/New_York
+permalink: pretty
 plugins: []
 exclude:
   - README.md

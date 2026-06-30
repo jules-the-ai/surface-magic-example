@@ -1,0 +1,27 @@
+<header class="site-header" id="top">
+  <div class="topbar wrap">
+    <a class="rating" href="{{ '/reviews/' | relative_url }}" aria-label="Read Surface Magic customer reviews"><strong>4.1</strong> ★★★★★ <span>10 Ratings &amp; Reviews</span></a>
+    <a class="quote-top" href="{{ '/request-quote-form/' | relative_url }}">Request Quote</a>
+  </div>
+  <div class="brand wrap">
+    <div class="service-area">Serving Erie County and<br>Niagara County, NY</div>
+    <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="Surface Magic home">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Surface Magic, LLC logo" class="logo">
+      <span>It’s Not Magic, It’s Surface Magic!</span>
+    </a>
+    <div class="phone-block"><span>Call or Text</span><a href="{{ site.phone_href }}">{{ site.phone }}</a></div>
+  </div>
+  <nav class="main-nav" aria-label="Primary navigation">
+    <div class="wrap nav-wrap">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <ul id="primary-menu" class="nav-list">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>

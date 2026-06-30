@@ -1,0 +1,20 @@
+- label: Home
+  url: /
+- label: Bathroom & Tile Refinishing
+  url: /services/bathroom-and-tile-surface-refinishing/
+- label: Shower & Tub Refinishing
+  url: /services/shower-and-tub-refinishing/
+- label: Kitchen Countertops
+  url: /services/kitchen-countertop-resurfacing/
+- label: Gallery
+  url: /gallery/
+- label: Offers
+  url: /special-offers/
+- label: FAQs
+  url: /faqs/
+- label: Reviews
+  url: /reviews/
+- label: About
+  url: /about/
+- label: Contact
+  url: /contact/

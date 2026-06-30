@@ -1,0 +1,15 @@
+<form class="quote-card" id="quote" action="mailto:{{ site.email }}" method="post" enctype="text/plain">
+  <p class="form-kicker">Request Quote</p>
+  <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name"></label>
+  <label>Phone or Email<input type="text" name="contact" autocomplete="email" placeholder="How should we reach you?"></label>
+  <label>Preferred Contact
+    <select name="preferred-contact"><option>Email</option><option>Phone</option></select>
+  </label>
+  <label>Service
+    <select name="service">
+      {% for service in site.data.services %}<option>{{ service.title }}</option>{% endfor %}<option>Other</option>
+    </select>
+  </label>
+  <label>Project notes<textarea name="message" rows="3" placeholder="Tell us about your surfaces"></textarea></label>
+  <button class="btn primary" type="submit">Request Quote</button>
+</form>

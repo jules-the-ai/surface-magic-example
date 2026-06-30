@@ -1,0 +1,24 @@
+<aside class="sidebar" aria-label="Helpful Surface Magic links">
+  <div class="sidebar-card cta-card">
+    <h2>Ready for a Fresh Surface?</h2>
+    <p>Same business day quotes are available for resurfacing. Services are typically provided within 2 weeks or upon scheduling.</p>
+    <a class="btn primary" href="{{ '/request-quote-form/' | relative_url }}">Request Quote</a>
+    <a class="text-link" href="{{ site.phone_href }}">Call or text {{ site.phone }}</a>
+  </div>
+  <div class="sidebar-card">
+    <h2>Services</h2>
+    <nav aria-label="Service navigation">
+      {% for service in site.data.services %}<a class="sidebar-link" href="{{ service.url | relative_url }}">{{ service.title }}</a>{% endfor %}
+    </nav>
+  </div>
+  <div class="sidebar-card guarantee-card">
+    <h2>Why Homeowners Choose Surface Magic</h2>
+    <ul>
+      <li>Woman-, locally-, and family-owned</li>
+      <li>Founded in 2010 with over 15 years of experience</li>
+      <li>Written guarantees on all work</li>
+      <li>3-year rental and 5-year owner-occupied warranties</li>
+      <li>Fully licensed and insured</li>
+    </ul>
+  </div>
+</aside>

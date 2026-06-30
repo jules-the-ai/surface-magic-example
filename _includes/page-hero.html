@@ -1,0 +1,9 @@
+<section class="subhero">
+  <div class="subhero-media" style="background-image:linear-gradient(90deg, rgba(0,0,0,.78), rgba(65,19,133,.55)), url('{{ page.hero_image | default: '/assets/img/hero.jpg' | relative_url }}')"></div>
+  <div class="wrap subhero-content">
+    <p class="eyebrow">{{ page.eyebrow | default: 'Surface Magic, LLC' }}</p>
+    <h1>{{ page.h1 | default: page.title }}</h1>
+    {% if page.hero_text %}<p>{{ page.hero_text }}</p>{% endif %}
+    <div class="hero-actions"><a class="btn primary" href="{{ '/request-quote-form/' | relative_url }}">Request a Free Quote</a><a class="btn ghost" href="{{ site.phone_href }}">Call {{ site.phone }}</a></div>
+  </div>
+</section>

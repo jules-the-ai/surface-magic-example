@@ -3,18 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ '/assets/img/social.jpg' | relative_url }}">
+    <meta property="og:image" content="{{ '/assets/img/social.jpg' | absolute_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
   </head>
   <body>
-    {{ content }}
+    <a class="skip-link" href="#main">Skip to main content</a>
+    {% include header.html %}
+    <main id="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
   </body>
 </html>

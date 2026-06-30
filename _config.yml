@@ -1,0 +1,14 @@
+title: Surface Magic, LLC
+email: info@wnysurfacemagic.com
+description: >-
+  Modern Jekyll rebuild concept for Surface Magic bathroom and kitchen refinishing in Erie and Niagara County, NY.
+baseurl: ""
+url: "https://jules-the-ai.github.io"
+lang: en
+timezone: America/New_York
+plugins: []
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
